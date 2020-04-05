@@ -1,15 +1,16 @@
+DROP TABLE task_info;
 CREATE TABLE task_info
 (
     id          integer PRIMARY KEY AUTOINCREMENT, --唯一标示
     title       text NOT NULL,                     --标题
     context     text    DEFAULT NULL,              --内容
-    owner       integer DEFAULT NULL,              -- 创建人
     type        integer DEFAULT 1,                 --task的类型 1,2 todo|task
     priority    integer DEFAULT 1,                 --优先级 1-9  映射列表
-    sub_id      text    DEFAULT NULL,              --子task的所有id用`,`隔开
-    parent_id   integer DEFAULT NULL,              --父task的id
-    remain      text    DEFAULT NULL,              --提醒时间，时间类型 09:11 只有小时维度| 自定义提醒时间，与创建时间相同，但是只有可以解析的可以作为提醒
+    sub_id      text    DEFAULT ',',              --子task的所有id用`,`隔开
+    parent_id   integer  default -1,              --父task的id
+    attention   text    DEFAULT NULL,              --提醒时间，时间类型 09:11 只有小时维度| 自定义提醒时间，与创建时间相同，但是只有可以解析的可以作为提醒
     create_time text    DEFAULT NULL,              --创建时间
+    operator       integer NOT NULL,              -- 操作人
     created_at  text    DEFAULT NULL,
     updated_at  text    DEFAULT NULL,
     version     integer DEFAULT NULL
@@ -53,12 +54,15 @@ CREATE TABLE user_info
     nickname   varchar(128) NOT NULL,
     phone      varchar(16) DEFAULT NULL,
     created_at text        DEFAULT NULL,
-    updated_at text        DEFAULT NULL
+    updated_at text        DEFAULT NULL,
+    version    integer     DEFAULT NULL
 );
+drop table user_info_expand;
 CREATE TABLE user_info_expand
 (
     id                 integer NOT NULL PRIMARY KEY, --唯一标示
     avatar             text,
+    page_size integer default 10,
     weixin_nickname    varchar(128) DEFAULT NULL,
     weixin_avatar      text,
     continue_login_day tinyint(1)   DEFAULT '0',

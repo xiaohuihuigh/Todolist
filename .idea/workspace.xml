@@ -2,20 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b6f6b8a-802b-462a-8563-524e65ba800a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/create_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/drop_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/insert_default.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/update_default.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/user_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/task_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/user_Info_expand.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/user_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/db_conn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/db_conn_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/task_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/task_info_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_info_expand.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_info_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/format_helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/time_helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example.app/Contents/MacOS/example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/has an error" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/parse_yaml/conf/conf_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/parse_yaml/conf/conf_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/parse_yaml/fileutil/fileutil_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/parse_yaml/fileutil/fileutil_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/create_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/insert_default.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/insert_default.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myAutoScrollToSource" value="true" />
+    <option name="myAutoScrollFromSource" value="true" />
+    <option name="myElementSize" value="166" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,7 +69,7 @@
         <item name="Todo.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="user_info: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="task_info_expand_for_multi_user: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -76,63 +96,104 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZqefpET9EH4iJQlPjTQPv5kbjF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conf/parse_yaml" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/conf/parse_yaml" />
-      <recent name="$PROJECT_DIR$/app/middlewares" />
-      <recent name="$PROJECT_DIR$/app/components/utils" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/go.mod" />
+      <recent name="$PROJECT_DIR$/../.." />
+      <recent name="$PROJECT_DIR$/app/tool" />
+      <recent name="$PROJECT_DIR$/conf/parse_yaml" />
+    </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build git.qutoutiao.net/todoList">
-    <configuration name="go build app/main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+  <component name="RunManager" selected="Go Test.go test git.qutoutiao.net/todoList/app/models">
+    <configuration name="TestTaskInfo in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/app/main.go" />
-      <package value="git.qutoutiao.net/todoList/app" />
+      <package value="git.qutoutiao.net/todoList/app/models" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestTaskInfo$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build git.qutoutiao.net/todoList" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUserInfo in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="git.qutoutiao.net/todoList" />
+      <package value="git.qutoutiao.net/todoList/app/models" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestUserInfo$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUserInfoModel_FindByID in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="git.qutoutiao.net/todoList/app/models" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestUserInfoModel_FindByID$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="todoList" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="git.qutoutiao.net/todoList/app/models" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task_info_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="todoList" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/app/main.go" />
-      <option name="run" value="false" />
+      <package value="git.qutoutiao.net/todoList" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/app/models/task_info_test.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build git.qutoutiao.net/todoList" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build app/main.go" />
+        <item itemvalue="Go Test.go test git.qutoutiao.net/todoList/app/models" />
+        <item itemvalue="Go Test.TestTaskInfo in git.qutoutiao.net/todoList/app/models" />
+        <item itemvalue="Go Test.TestUserInfo in git.qutoutiao.net/todoList/app/models" />
+        <item itemvalue="Go Test.task_info_test.go" />
+        <item itemvalue="Go Test.TestUserInfoModel_FindByID in git.qutoutiao.net/todoList/app/models" />
       </list>
     </recent_temporary>
   </component>
@@ -149,22 +210,17 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@287555f0" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@6f2dd60a" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@1d157ca2" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@2ad10fca" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7aab4c60" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -176,7 +232,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Build_Tags_&amp;_Vendoring" timestamp="1585971251977">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Build_Tags_&amp;_Vendoring/0.0.1440.900@0.0.1440.900" timestamp="1585971251977" />
     <state x="320" y="115" key="#Inspections" timestamp="1585575772059">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -189,6 +252,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1585930105722" />
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585970515139">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1585970515139" />
     <state x="429" y="101" key="#go_build_app/main.go" timestamp="1585573451636">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -205,52 +272,160 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="159" key="ExecutionTargetDialog/0.0.1440.900@0.0.1440.900" timestamp="1585934683859" />
-    <state width="958" height="237" key="GridCell.Tab.0.bottom" timestamp="1585934754357">
+    <state width="1398" height="281" key="GridCell.Tab.0.bottom" timestamp="1586030805419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="958" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585934754357" />
-    <state width="958" height="237" key="GridCell.Tab.0.center" timestamp="1585934754354">
+    <state width="1398" height="281" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586030805419" />
+    <state width="1398" height="281" key="GridCell.Tab.0.center" timestamp="1586030805418">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="958" height="237" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585934754354" />
-    <state width="958" height="237" key="GridCell.Tab.0.left" timestamp="1585934754353">
+    <state width="1398" height="281" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586030805418" />
+    <state width="1398" height="281" key="GridCell.Tab.0.left" timestamp="1586030805417">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="958" height="237" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585934754353" />
-    <state width="958" height="237" key="GridCell.Tab.0.right" timestamp="1585934754356">
+    <state width="1398" height="281" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586030805417" />
+    <state width="1398" height="281" key="GridCell.Tab.0.right" timestamp="1586030805419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="958" height="237" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585934754356" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1585622111128">
+    <state width="1398" height="281" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586030805419" />
+    <state width="1398" height="370" key="GridCell.Tab.1.bottom" timestamp="1586030523118">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585622111128" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1585622111126">
+    <state width="1398" height="370" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586030523118" />
+    <state width="1398" height="370" key="GridCell.Tab.1.center" timestamp="1586030523116">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1585622111126" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1585622111125">
+    <state width="1398" height="370" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586030523116" />
+    <state width="1398" height="370" key="GridCell.Tab.1.left" timestamp="1586030523116">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1585622111125" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1585622111127">
+    <state width="1398" height="370" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586030523116" />
+    <state width="1398" height="370" key="GridCell.Tab.1.right" timestamp="1586030523117">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1585622111127" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1585579514856">
+    <state width="1398" height="370" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586030523117" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1585942823340">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1585579514856" />
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1585942823340" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1586026558641">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1586026558641" />
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586027937071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1586027937071" />
+    <state x="100" y="100" width="1240" height="700" key="dock-window-1" timestamp="1585983492747">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="dock-window-1/0.23.1440.877@0.23.1440.877" timestamp="1585983492747" />
+    <state x="100" y="100" width="1240" height="700" key="dock-window-2" timestamp="1585983492748">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="dock-window-2/0.23.1440.877@0.23.1440.877" timestamp="1585983492748" />
+    <state x="656" y="259" width="667" height="486" key="find.popup" timestamp="1585972239185">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="656" y="259" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1585972239185" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586005570995">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586005570995" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/main.go</url>
-          <line>10</line>
+          <line>6</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../github.com/zserge/webview/webview.go</url>
+          <line>132</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>49</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>55</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>59</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>63</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>66</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>42</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>36</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>32</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>138</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>195</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>127</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>223</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>165</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
+          <line>226</line>
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="Conn" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/todoList$go_test_git_qutoutiao_net_todoList_app_models.out" NAME="go test git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586030805168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/todoList$TestTaskInfo_in_git_qutoutiao_net_todoList_app_models.out" NAME="TestTaskInfo in git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586030701967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
