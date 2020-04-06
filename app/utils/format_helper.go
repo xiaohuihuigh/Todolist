@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"git.qutoutiao.net/todoList/app/components/utils"
 	"reflect"
 	"strconv"
 	"strings"
@@ -13,6 +14,16 @@ func String2Arr(s string)[]string{
 			continue
 		}
 		strArr = append(strArr,item)
+	}
+	return strArr
+}
+func String2Int64Arr(s string)[]int64{
+	var strArr  []int64
+	for _,item:=range strings.Split(s,","){
+		if item == ""{
+			continue
+		}
+		strArr = append(strArr,utils.GetStr2Int64(item,0))
 	}
 	return strArr
 }
@@ -37,9 +48,9 @@ func Int64Arr2String(ints []int64)(result string){
 	result = ""
 	for i,str := range ints{
 		if i == len(ints){
-			result += strconv.FormatInt(str,64)
+			result += strconv.FormatInt(str,10)
 		} else{
-			result +=strconv.FormatInt(str,64)+","
+			result +=strconv.FormatInt(str,10)+","
 		}
 	}
 	return

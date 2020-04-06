@@ -23,9 +23,13 @@ func TestUserInfo(t *testing.T) {
 	d2.ID  = 2
 	d2.NickName  = "test1"
 	//not record
+	err = d.Update(d.ID)
+	it.NotEmpty(err)
 	err=d.Save()
 	it.Empty(err)
 
+	err=d.Save()
+	it.Empty(err)
 	//record id:2 nickname:test
 	res:=models.NewUserInfoModel()
 	err =res.FindByID(2)

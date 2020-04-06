@@ -1,34 +1,29 @@
 package models
 
-import "git.qutoutiao.net/todoList/app/entity"
+import (
+	"git.qutoutiao.net/todoList/app/entity/table"
+)
 
 type UserInfoExpandModel struct {
-	*entity.UserInfoExpand
+	*table.UserInfoExpandData
 }
 
 var UserInfoExpandTable = "user_info_expand"
 
 func NewUserInfoExpandModel() *UserInfoExpandModel {
-	return &UserInfoExpandModel{UserInfoExpand: &entity.UserInfoExpand{}}
+	return &UserInfoExpandModel{UserInfoExpandData: &table.UserInfoExpandData{}}
 }
 
-func (u *UserInfoExpandModel) GetPageSize() (err error) {
-	err = Conn.Table(UserInfoExpandTable).Where("id = ?", u.ID).Find(&u).Error
+func (u *UserInfoExpandModel)FindByID(id int64) (err error) {
+	err = Conn.Table(UserInfoExpandTable).Where("id = ?", id).Find(&u).Error
 	return
 }
-
-func GetPageSize(id int64) (pageSize int) {
-	userInfoExpandModel := NewUserInfoExpandModel()
-	userInfoExpandModel.ID = id
-	err := userInfoExpandModel.GetPageSize()
-	if err != nil ||userInfoExpandModel.PageSize == 0 {
-		userInfoExpandModel.ID = 1
-		err=userInfoExpandModel.GetPageSize()
-		if err != nil|| userInfoExpandModel.PageSize == 0{
-			pageSize = 20
-			return
-		}
+////todo:这一部分是控制权限的层，或者一个叫数据返回控制层。
+func (u *UserInfoExpandModel)GetPageSize()  int {
+	err := u.FindByID(u.ID)
+	if err != nil {
+		return  0
 	}
-	pageSize = userInfoExpandModel.PageSize
-	return
+	return u.PageSize
 }
+

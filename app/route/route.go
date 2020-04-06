@@ -2,6 +2,7 @@ package route
 
 import (
 	"git.qutoutiao.net/todoList/app/components/utils"
+	"git.qutoutiao.net/todoList/app/controllers"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,4 +17,5 @@ func SetRouter(engine *gin.Engine) {
 	engine.GET("/ping", func(c *gin.Context) {
 		utils.Response(c,utils.HandlerSuccess,"word")
 		})
+	engine.GET("/getTask",controllers.GetTask.GetTask)
 }

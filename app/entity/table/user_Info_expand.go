@@ -1,6 +1,6 @@
-package entity
+package table
 
-type UserInfoExpand struct {
+type UserInfoExpandData struct {
 	ID int64 `gorm:"column:id"`
 	Avatar string `gorm:"column:avatar"`
 	PageSize int `gorm:"column:page_size"`

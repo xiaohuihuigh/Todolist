@@ -1,7 +1,7 @@
 package models
 
 import (
-	"git.qutoutiao.net/todoList/app/entity"
+	"git.qutoutiao.net/todoList/app/entity/table"
 	"git.qutoutiao.net/todoList/app/utils"
 	"github.com/jinzhu/gorm"
 	"strconv"
@@ -10,7 +10,7 @@ import (
 )
 
 type TaskInfoModel struct {
-	*entity.TaskInfo
+	*table.TaskInfoData
 	*gorm.DB
 	IDs string
 }
@@ -18,19 +18,11 @@ type TaskInfoModel struct {
 var TaskInfoTable = "task_info"
 
 func NewTaskInfoModel() *TaskInfoModel {
-	return &TaskInfoModel{TaskInfo: &entity.TaskInfo{}, DB: Conn}
+	return &TaskInfoModel{TaskInfoData: &table.TaskInfoData{}, DB: Conn}
 }
 
-//避免重复代码
-func (u *TaskInfoModel) SetIDsOffsetAndLimit(operator int64, pageNum int) *gorm.DB {
-	conn := u.SetIDs()
-	SetOffsetAndLimit(conn, operator, pageNum)
-	return conn
-}
-func (u *TaskInfoModel) SetIDs() *gorm.DB {
-	conn := u.Where("id in (?)", utils.String2Arr(u.IDs))
-	return conn
-}
+//todo:数据返回控制层
+
 
 func (u *TaskInfoModel) SetTable() *gorm.DB {
 	conn := u.Table(TaskInfoTable)
@@ -38,27 +30,31 @@ func (u *TaskInfoModel) SetTable() *gorm.DB {
 }
 
 func (u *TaskInfoModel) FindByID(id int64) (err error) {
-	err = u.SetTable().Where("id = ?", id).Limit(1).Find(&u.TaskInfo).Error
+	err = u.SetTable().Where("id = ?", id).Limit(1).Find(&u.TaskInfoData).Error
 	return
 }
 
-func (u *TaskInfoModel) FindByIDs(ids string) (result []*entity.TaskInfo, err error) {
+func (u *TaskInfoModel) Find() (result []*table.TaskInfoData, err error) {
+	err = u.SetTable().Debug().Find(&result).Error
+	return
+}
+func (u *TaskInfoModel) FindByIDs(ids string) (result []*table.TaskInfoData, err error) {
 
 	err = u.SetTable().Where("id in (?)", utils.String2Arr(ids)).Find(&result).Error
 	return
 }
 
-func (u *TaskInfoModel) FindWhere() (result []*entity.TaskInfo, err error) {
+func (u *TaskInfoModel) FindWhere() (result []*table.TaskInfoData, err error) {
 	conn := u.SetTable()
 
 	if u.ID != 0 {
 		conn = conn.Where("id  = ?", u.ID)
 	}
 	if u.Title != "" {
-		conn = conn.Where("title like '%?%'", u.Title)
+		conn = conn.Where("title like ?", "%"+u.Title+"%")
 	}
 	if u.Context != "" {
-		conn = conn.Where("context like '%?%", u.Context)
+		conn = conn.Where("context like ?","%"+ u.Context+"%")
 	}
 	if u.Type != 0 {
 		conn = conn.Where("type = ?", u.Type)
@@ -69,16 +65,10 @@ func (u *TaskInfoModel) FindWhere() (result []*entity.TaskInfo, err error) {
 	if u.ParentID != 0 {
 		conn = conn.Where("parent_id = ?", u.ParentID)
 	}
-	if u.Attention != "" {
-		conn = conn.Where("attention like '%?%'", u.Attention)
-	}
-	if u.CreatedAt != "" {
-		conn = conn.Where("created_at like '%?%'", u.CreatedAt)
-	}
-	err = conn.Find(&result).Error
+	err = conn.Debug().Find(&result).Error
 	return
 }
-func (u *TaskInfoModel) FindIn(ids string, types string, priorities string, ) (result []*entity.TaskInfo, err error) {
+func (u *TaskInfoModel) FindIn(ids string, types string, priorities string, ) (result []*table.TaskInfoData, err error) {
 	conn := u.SetTable()
 
 	if ids != "" {
@@ -93,33 +83,34 @@ func (u *TaskInfoModel) FindIn(ids string, types string, priorities string, ) (r
 		conn = conn.Where("priority in (?)", utils.String2Arr(priorities))
 	}
 
-	err = conn.Find(&result).Error
+	err = conn.Debug().Find(&result).Error
 	return
 }
 
-func (u *TaskInfoModel) FindParent() (result []*entity.TaskInfo, err error) {
-	err = u.SetTable().Where("id = ?", u.ParentID).Limit(1).Find(&result).Error
+func (u *TaskInfoModel) FindParent() (result []*table.TaskInfoData, err error) {
+	err = u.SetTable().Where("id = ?", u.ParentID).Limit(1).Debug().Find(&result).Error
 	return
 }
-func (u *TaskInfoModel) FindSub(pageNum int) (result []*entity.TaskInfo, err error) {
-	err = u.SetTable().Where("id in (?)", utils.String2Arr(u.SubID)).Find(&result).Error
+func (u *TaskInfoModel) FindSub() (result []*table.TaskInfoData, err error) {
+	err = u.SetTable().Where("id in (?)", utils.String2Arr(u.SubID)).Debug().Find(&result).Error
 	return
 }
 
-func (u *TaskInfoModel) FindAll() (result []*entity.TaskInfo, err error) {
+func (u *TaskInfoModel) FindAll() (result []*table.TaskInfoData, err error) {
 
 	err = u.SetTable().Find(&result).Error
 	return
 }
 
-func (u *TaskInfoModel) getIDs(dbData []*entity.TaskInfo) (result string) {
-	result = ""
-	var resultArr []int64
-	for _, dbItem := range dbData {
-		resultArr = append(resultArr, dbItem.ID)
-	}
-	return utils.Int64Arr2String(resultArr)
-}
+//todo:数据返回控制层
+//func (u *TaskInfoModel) getIDs(dbData []*entity.TaskInfoData) (result string) {
+//	result = ""
+//	var resultArr []int64
+//	for _, dbItem := range dbData {
+//		resultArr = append(resultArr, dbItem.ID)
+//	}
+//	return utils.Int64Arr2String(resultArr)
+//}
 
 func (u *TaskInfoModel) Save() (err error) {
 	uClone := NewTaskInfoModel()
@@ -132,11 +123,12 @@ func (u *TaskInfoModel) Save() (err error) {
 	return
 }
 
+
 func (u *TaskInfoModel) Insert() (err error) {
 	u.Version = 1
-	u.CreatedAt = utils.TimeToString(time.Now())
-	u.UpdatedAt = utils.TimeToString(time.Now())
-	err = u.SetTable().Debug().Create(&u.TaskInfo).Error
+	u.CreatedAt = time.Now()
+	u.UpdatedAt = time.Now()
+	err = u.SetTable().Debug().Create(&u.TaskInfoData).Error
 	if u.SubID != "," {
 		u.checkSubTaskParentID(u.SubID, ",")
 	}
@@ -153,8 +145,8 @@ func (u *TaskInfoModel) Update(id int64) (err error) {
 	}
 
 	u.Version = old.Version + 1
-	u.UpdatedAt = utils.TimeToString(time.Now())
-	err = u.SetTable().Where("id = ?", id).Debug().Update(&u.TaskInfo).Error
+	u.UpdatedAt = time.Now()
+	err = u.SetTable().Where("id = ?", id).Debug().Update(&u.TaskInfoData).Error
 	if u.SubID != old.SubID {
 		u.checkSubTaskParentID(u.SubID, old.SubID)
 	}
@@ -171,6 +163,7 @@ func (u *TaskInfoModel) checkSubTaskParentID(newSubIDs string, oldSubIDs string)
 	delete,add := utils.MergeNewAndOld(newSubIDs,oldSubIDs)
 	if delete != "," {
 		dbRes, err := u.FindByIDs(delete)
+		//todo:这里处理数据库查询错误，添加log？
 		if err != nil {
 			return
 		}
@@ -178,13 +171,14 @@ func (u *TaskInfoModel) checkSubTaskParentID(newSubIDs string, oldSubIDs string)
 			if dbItem.ParentID != -1 {
 				dbItem.ParentID = -1
 				newModel := NewTaskInfoModel()
-				newModel.TaskInfo = dbItem
+				newModel.TaskInfoData = dbItem
 				newModel.Save()
 			}
 		}
 	}
 	if add != "," {
 		dbRes, err := u.FindByIDs(add)
+		//todo:这里处理数据库查询错误，添加log？
 		if err != nil {
 			return
 		}
@@ -192,7 +186,7 @@ func (u *TaskInfoModel) checkSubTaskParentID(newSubIDs string, oldSubIDs string)
 			if dbItem.ParentID != u.ID {
 				dbItem.ParentID = u.ID
 				newModel := NewTaskInfoModel()
-				newModel.TaskInfo = dbItem
+				newModel.TaskInfoData = dbItem
 				newModel.Save()
 			}
 		}
@@ -229,7 +223,7 @@ func (u *TaskInfoModel) checkParentTaskSubID(newParentID int64, oldParentID int6
 
 }
 func (u *TaskInfoModel) Delete(id int64) (err error) {
-	err = u.SetTable().Where("id = ?", id).Delete(struct{}{}).Error
+	err = u.SetTable().Where("id = ?", id).Debug().Delete(struct{}{}).Error
 	return
 }
 func (u *TaskInfoModel) DeleteByIDs(ids string) (err error) {
@@ -248,5 +242,36 @@ func (u *TaskInfoModel) DeleteByIDs(ids string) (err error) {
 		}()
 	}
 	wg.Wait()
+	return
+}
+func (t *TaskInfoModel) Filter(db *gorm.DB) {
+	t.DB = db
+}
+
+func (t *TaskInfoModel) LimitByUser(db *gorm.DB) {
+	ut := NewUserTaskModel()
+	ut.DB = db
+	err := ut.FindFirst()
+	if err != nil {
+		return
+	}
+	idArr := utils.String2Arr(ut.TaskIDs)
+	t.DB = t.DB.Where("id in (?)", idArr)
+	return
+}
+
+func (t *TaskInfoModel) LimitByTypeProject(db *gorm.DB) {
+
+	taskType2Model := NewTaskForProjectModel()
+	taskType2Model.DB = db
+	dbRes, err := taskType2Model.Find()
+	if err != nil {
+		return
+	}
+	var idArr []int64
+	for _, item := range dbRes {
+		idArr = append(idArr, item.ID)
+	}
+	t.DB = t.DB.Where("id in (?)", idArr)
 	return
 }

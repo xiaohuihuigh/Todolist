@@ -1,32 +1,45 @@
 DROP TABLE task_info;
 CREATE TABLE task_info
 (
-    id          integer PRIMARY KEY AUTOINCREMENT, --唯一标示
-    title       text NOT NULL,                     --标题
-    context     text    DEFAULT NULL,              --内容
-    type        integer DEFAULT 1,                 --task的类型 1,2 todo|task
-    priority    integer DEFAULT 1,                 --优先级 1-9  映射列表
-    sub_id      text    DEFAULT ',',              --子task的所有id用`,`隔开
-    parent_id   integer  default -1,              --父task的id
-    attention   text    DEFAULT NULL,              --提醒时间，时间类型 09:11 只有小时维度| 自定义提醒时间，与创建时间相同，但是只有可以解析的可以作为提醒
-    create_time text    DEFAULT NULL,              --创建时间
-    operator       integer NOT NULL,              -- 操作人
-    created_at  text    DEFAULT NULL,
-    updated_at  text    DEFAULT NULL,
-    version     integer DEFAULT NULL
+    id         integer PRIMARY KEY AUTOINCREMENT, --唯一标示
+    title      text     NOT NULL,                 --标题
+    context    text    DEFAULT NULL,              --内容
+    type       integer DEFAULT 1,                 --task的类型 1,2 todo|project
+    priority   integer DEFAULT 1,                 --优先级 1-9  映射列表
+    sub_id     text    DEFAULT ',',               --子task的所有id用`,`隔开
+    parent_id  integer default -1,                --父task的id
+    operator   integer  NOT NULL,                 -- 操作人
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL,
+    version    integer  NOT NULL
 );
-CREATE TABLE task_info_expand_for_type2
+
+CREATE TABLE task_info_for_todo
 (
-    id              integer PRIMARY KEY,  --唯一标示对应task_info中的id
-    progress        integer DEFAULT 0,    --type2使用 进度  0-99
-    status          integer DEFAULT 1,    --type2使用 是否完结 1未开始，2进行中，3已结束
-    start_time      text    DEFAULT NULL, --type2使用 开始时间
-    plan_end_time   text    DEFAULT NULL, --type2使用  计划结束时间
-    actual_end_time text    DEFAULT NULL, --type2使用 实际结束时间
-    created_at      text    DEFAULT NULL,
-    updated_at      text    DEFAULT NULL,
-    version         integer DEFAULT NULL
+    id         integer PRIMARY KEY AUTOINCREMENT, --唯一标示
+    start_time datetime default null,
+    end_time   datetime default '2050-01-01 12:12:12',
+    attention  time     DEFAULT NULL,             -- 提醒时间，时间类型 09:11 只有小时维度| 自定义提醒时间，与创建时间相同，但是只有可以解析的可以作为提醒
+    operator   integer  NOT NULL,                 -- 操作人
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL,
+    version    integer  NOT NULL
 );
+CREATE TABLE task_info_for_project
+(
+    id              integer PRIMARY KEY AUTOINCREMENT,     --唯一标示
+    task_start_time date    default null,                  --开始时间 2020-02-02 09:09:09 default current_time
+    end_time        date    DEFAULT '2050-01-01 12:12:12', -- 结束时间 status 变为3的时间，如果由3变为1/2。则更改时间为'2050-01-01 00:00:00'
+    plan_end_time   date    DEFAULT '2050-01-01 12:12:12', -- 计划结束时间
+    actual_end_time text    DEFAULT NULL,                  -- 实际结束时间
+    progress        integer DEFAULT 0,                     -- 进度  0-99
+    status          integer DEFAULT 1,                     -- 是否完结 1未开始，2进行中，3已结束
+    operator        integer  NOT NULL,                     -- 操作人
+    created_at      datetime NOT NULL,
+    updated_at      datetime NOT NULL,
+    version         integer  NOT NULL
+);
+
 CREATE TABLE task_info_expand_for_multi_user
 (
     id         integer PRIMARY KEY,  --唯一标示对应task_info中的id
@@ -62,7 +75,7 @@ CREATE TABLE user_info_expand
 (
     id                 integer NOT NULL PRIMARY KEY, --唯一标示
     avatar             text,
-    page_size integer default 10,
+    page_size          integer      default 10,
     weixin_nickname    varchar(128) DEFAULT NULL,
     weixin_avatar      text,
     continue_login_day tinyint(1)   DEFAULT '0',

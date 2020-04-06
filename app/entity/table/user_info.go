@@ -1,6 +1,6 @@
-package entity
+package table
 
-type UserInfo struct {
+type UserInfoData struct {
 	ID int64 `gorm:"column:id"`
 	NickName string `gorm:"column:nickname"`
 	Phone string `gorm:"column:phone"`

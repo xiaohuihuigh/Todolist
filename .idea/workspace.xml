@@ -2,27 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b6f6b8a-802b-462a-8563-524e65ba800a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/user_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/task_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/user_Info_expand.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/user_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/db_conn.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/db_conn_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/task_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/task_info_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_info_expand.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_info_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/format_helper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/time_helper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example.app/Contents/MacOS/example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/has an error" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/add_task.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/get_task.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/service/search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/service/task_result.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/table/task_info.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/table/task_info_for_project.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/entity/table/user_task.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/task_info_for_project.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_info_expand_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/user_task.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/get_task.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/get_task_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/content_helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/response_helper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/parse_yaml/conf/conf_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/parse_yaml/conf/conf_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/parse_yaml/fileutil/fileutil_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/parse_yaml/fileutil/fileutil_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entity/task_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entity/user_Info_expand.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/entity/table/user_Info_expand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entity/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/entity/table/user_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middlewares/cors.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/cors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/db_conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/db_conn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/task_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/task_info_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task_info_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_info_expand.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info_expand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_info_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/route/route.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/format_helper.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/format_helper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql/create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/create_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/insert_default.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/insert_default.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +44,7 @@
   <component name="CoverageViewManager">
     <option name="myAutoScrollToSource" value="true" />
     <option name="myAutoScrollFromSource" value="true" />
-    <option name="myElementSize" value="166" />
+    <option name="myElementSize" value="358" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -63,13 +72,6 @@
         <item name="Todo.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Todo.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="task_info_expand_for_multi_user: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -116,24 +118,56 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/utils" />
     <property name="settings.editor.selected.configurable" value="goland.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/entity/table" />
       <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/go.mod" />
       <recent name="$PROJECT_DIR$/../.." />
       <recent name="$PROJECT_DIR$/app/tool" />
-      <recent name="$PROJECT_DIR$/conf/parse_yaml" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test git.qutoutiao.net/todoList/app/models">
+  <component name="RunManager" selected="Go Build.go build git.qutoutiao.net/todoList">
+    <configuration name="go build git.qutoutiao.net/todoList" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="todoList" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="git.qutoutiao.net/todoList" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestFindWhere in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="todoList" />
+      <working_directory value="$PROJECT_DIR$/app/models" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="git.qutoutiao.net/todoList/app/models" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestFindWhere$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGetTask in git.qutoutiao.net/todoList/app/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="todoList" />
+      <working_directory value="$PROJECT_DIR$/app/services" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="git.qutoutiao.net/todoList/app/services" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestGetTask$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestTaskInfo in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="todoList" />
       <working_directory value="$PROJECT_DIR$/app/models" />
@@ -143,28 +177,6 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestTaskInfo$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestUserInfo in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/app/models" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="git.qutoutiao.net/todoList/app/models" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestUserInfo$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestUserInfoModel_FindByID in git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/app/models" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="git.qutoutiao.net/todoList/app/models" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestUserInfoModel_FindByID$" />
       <method v="2" />
     </configuration>
     <configuration name="go test git.qutoutiao.net/todoList/app/models" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -177,23 +189,13 @@
       <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="task_info_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="todoList" />
-      <working_directory value="$PROJECT_DIR$/app/models" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <package value="git.qutoutiao.net/todoList" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/app/models/task_info_test.go" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.go test git.qutoutiao.net/todoList/app/models" />
+        <item itemvalue="Go Build.go build git.qutoutiao.net/todoList" />
+        <item itemvalue="Go Test.TestGetTask in git.qutoutiao.net/todoList/app/services" />
+        <item itemvalue="Go Test.TestFindWhere in git.qutoutiao.net/todoList/app/models" />
         <item itemvalue="Go Test.TestTaskInfo in git.qutoutiao.net/todoList/app/models" />
-        <item itemvalue="Go Test.TestUserInfo in git.qutoutiao.net/todoList/app/models" />
-        <item itemvalue="Go Test.task_info_test.go" />
-        <item itemvalue="Go Test.TestUserInfoModel_FindByID in git.qutoutiao.net/todoList/app/models" />
+        <item itemvalue="Go Test.go test git.qutoutiao.net/todoList/app/models" />
       </list>
     </recent_temporary>
   </component>
@@ -206,21 +208,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@287555f0" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6f2dd60a" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Todo.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2ad10fca" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -240,10 +227,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Build_Tags_&amp;_Vendoring/0.0.1440.900@0.0.1440.900" timestamp="1585971251977" />
-    <state x="320" y="115" key="#Inspections" timestamp="1585575772059">
+    <state x="320" y="115" key="#Editor_|_Color_Scheme_|_General" timestamp="1586068215120">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1585575772059" />
+    <state x="320" y="115" key="#Editor_|_Color_Scheme_|_General/0.0.1440.900@0.0.1440.900" timestamp="1586068215120" />
+    <state x="320" y="115" key="#Inspections" timestamp="1586151950109">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1586151950109" />
     <state x="320" y="115" key="#SQL_Dialects" timestamp="1585934359115">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -272,38 +263,46 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="159" key="ExecutionTargetDialog/0.0.1440.900@0.0.1440.900" timestamp="1585934683859" />
-    <state width="1398" height="281" key="GridCell.Tab.0.bottom" timestamp="1586030805419">
+    <state width="1398" height="295" key="GridCell.Tab.0.bottom" timestamp="1586164922588">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="281" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586030805419" />
-    <state width="1398" height="281" key="GridCell.Tab.0.center" timestamp="1586030805418">
+    <state width="1398" height="295" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586164922588" />
+    <state width="1398" height="344" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586163837360" />
+    <state width="1398" height="295" key="GridCell.Tab.0.center" timestamp="1586164922587">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="281" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586030805418" />
-    <state width="1398" height="281" key="GridCell.Tab.0.left" timestamp="1586030805417">
+    <state width="1398" height="295" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586164922587" />
+    <state width="1398" height="344" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586163837359" />
+    <state width="1398" height="295" key="GridCell.Tab.0.left" timestamp="1586164922586">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="281" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586030805417" />
-    <state width="1398" height="281" key="GridCell.Tab.0.right" timestamp="1586030805419">
+    <state width="1398" height="295" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586164922586" />
+    <state width="1398" height="344" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586163837358" />
+    <state width="1398" height="295" key="GridCell.Tab.0.right" timestamp="1586164922587">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="281" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586030805419" />
-    <state width="1398" height="370" key="GridCell.Tab.1.bottom" timestamp="1586030523118">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="295" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586164922587" />
+    <state width="1398" height="344" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586163837360" />
+    <state width="1398" height="300" key="GridCell.Tab.1.bottom" timestamp="1586164925221">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586030523118" />
-    <state width="1398" height="370" key="GridCell.Tab.1.center" timestamp="1586030523116">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586164922516" />
+    <state width="1398" height="300" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586164925221" />
+    <state width="1398" height="300" key="GridCell.Tab.1.center" timestamp="1586164925220">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586030523116" />
-    <state width="1398" height="370" key="GridCell.Tab.1.left" timestamp="1586030523116">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1586164922515" />
+    <state width="1398" height="300" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1586164925220" />
+    <state width="1398" height="300" key="GridCell.Tab.1.left" timestamp="1586164925219">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586030523116" />
-    <state width="1398" height="370" key="GridCell.Tab.1.right" timestamp="1586030523117">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="281" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1586164922514" />
+    <state width="1398" height="300" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1586164925219" />
+    <state width="1398" height="300" key="GridCell.Tab.1.right" timestamp="1586164925220">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586030523117" />
+    <state width="1398" height="281" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586164922515" />
+    <state width="1398" height="300" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1586164925220" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1585942823340">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -312,10 +311,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1586026558641" />
-    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586027937071">
+    <state x="456" y="210" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1586152810244">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1586027937071" />
+    <state x="456" y="210" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1586152810244" />
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586155086833">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="265" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1586155086833" />
     <state x="100" y="100" width="1240" height="700" key="dock-window-1" timestamp="1585983492747">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -324,10 +327,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="dock-window-2/0.23.1440.877@0.23.1440.877" timestamp="1585983492748" />
-    <state x="656" y="259" width="667" height="486" key="find.popup" timestamp="1585972239185">
+    <state x="656" y="259" width="667" height="486" key="find.popup" timestamp="1586156170876">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="656" y="259" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1585972239185" />
+    <state x="656" y="259" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1586156170876" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586005570995">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -336,85 +339,55 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main.go</url>
-          <line>6</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/../../github.com/zserge/webview/webview.go</url>
           <line>132</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>49</line>
+          <line>53</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>55</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
           <line>59</line>
-          <option name="timeStamp" value="30" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
           <line>63</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
+          <line>67</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>66</line>
+          <line>70</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>42</line>
+          <line>46</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>36</line>
+          <line>40</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+        <line-breakpoint type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app/models/user_info_test.go</url>
-          <line>32</line>
+          <line>36</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>138</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>195</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>127</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>223</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>165</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/models/task_info.go</url>
-          <line>226</line>
-          <option name="timeStamp" value="101" />
+        <line-breakpoint type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/models/task_info_test.go</url>
+          <line>133</line>
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -425,7 +398,9 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/todoList$go_test_git_qutoutiao_net_todoList_app_models.out" NAME="go test git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586030805168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/todoList$TestTaskInfo_in_git_qutoutiao_net_todoList_app_models.out" NAME="TestTaskInfo in git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586030701967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/todoList$go_test_git_qutoutiao_net_todoList_app_models.out" NAME="go test git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586068616209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/todoList$TestFindWhere_in_git_qutoutiao_net_todoList_app_models.out" NAME="TestFindWhere in git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586067168692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/todoList$TestTaskInfo_in_git_qutoutiao_net_todoList_app_models.out" NAME="TestTaskInfo in git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586064612607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/todoList$TestUserInfoExpandModel_in_git_qutoutiao_net_todoList_app_models.out" NAME="TestUserInfoExpandModel in git.qutoutiao.net/todoList/app/models Coverage Results" MODIFIED="1586067519260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
