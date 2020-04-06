@@ -18,7 +18,7 @@ func Cors() gin.HandlerFunc {
 			//  header的类型
 			ctx.Header("Access-Control-Allow-Headers", "Authorization, Content-Length, X-CSRF-Token, "+
 				"Token,session,X_Requested_With,Accept, Origin, Host, Connection, Accept-Encoding, "+
-				"Accept-Language,DNT, X-CustomHeader, Keep-Alive, Operator-Agent, X-Requested-With, "+
+				"Accept-Language,DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, "+
 				"If-Modified-Since, Cache-Control, Content-Type, Pragma")
 
 			//  允许跨域设置
@@ -42,7 +42,7 @@ func CorsV2() gin.HandlerFunc {
 		ctx.Header("Access-Control-Max-Age", "600")
 		ctx.Header("Access-Control-Allow-Credentials", "true")
 		ctx.Header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE")
-		ctx.Header("Access-Control-Allow-Headers", "x-token,token,DNT,X-Mx-ReqToken,Keep-Alive,Operator-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization")
+		ctx.Header("Access-Control-Allow-Headers", "x-token,token,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization")
 		ctx.Next()
 	}
 }
