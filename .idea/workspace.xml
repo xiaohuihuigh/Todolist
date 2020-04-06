@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b6f6b8a-802b-462a-8563-524e65ba800a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/add_task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/get_task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/service/search.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/service/task_result.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/table/task_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/table/task_info_for_project.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/table/user_task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/task_info_for_project.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_info_expand_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/get_task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/get_task_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/content_helper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/response_helper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entity/task_info.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entity/user_Info_expand.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/entity/table/user_Info_expand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entity/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/entity/table/user_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middlewares/cors.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/middlewares/cors.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/db_conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/db_conn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/task_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/task_info_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task_info_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user_info_expand.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info_expand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user_info_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_info_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/route/route.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/format_helper.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/format_helper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/create_table.sql" afterDir="false" />
-    </list>
+    <list default="true" id="4b6f6b8a-802b-462a-8563-524e65ba800a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
