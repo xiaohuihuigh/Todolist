@@ -2,7 +2,7 @@ package parse_yaml
 
 import (
 	"bytes"
-	"git.qutoutiao.net/todoList/conf/parse_yaml/fileutil"
+	"todoList/conf/parse_yaml/fileutil"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 )

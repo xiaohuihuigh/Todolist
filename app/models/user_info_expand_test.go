@@ -1,7 +1,7 @@
 package models_test
 
 import (
-	"git.qutoutiao.net/todoList/app/models"
+	"todoList/app/models"
 	"github.com/golib/assert"
 	"testing"
 )

@@ -6,7 +6,7 @@ package conf_test
 //	"path/filepath"
 //	"testing"
 //
-//	"git.qutoutiao.net/todo/gopher/qms/pkg/conf"
+//	todo/gopher/qms/pkg/conf"
 //	"github.com/go-chassis/go-archaius"
 //	"github.com/stretchr/testify/assert"
 //)

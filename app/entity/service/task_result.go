@@ -1,7 +1,7 @@
 package service
 
 import (
-	"git.qutoutiao.net/todoList/app/entity/table"
+	"todoList/app/entity/table"
 )
 
 type TaskResult struct{

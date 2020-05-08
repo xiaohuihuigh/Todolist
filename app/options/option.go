@@ -1,7 +1,7 @@
 package options
 
 import (
-	"git.qutoutiao.net/todoList/conf/parse_yaml/conf"
+	"todoList/conf/parse_yaml/conf"
 )
 
 // Shared Options

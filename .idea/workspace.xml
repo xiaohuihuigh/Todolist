@@ -90,7 +90,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -274,10 +274,10 @@
     </state>
     <state width="1398" height="209" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1586166420970" />
     <state width="1398" height="209" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1586180047419" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1585942823340">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1587113371440">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1585942823340" />
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1587113371440" />
     <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1586026558641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

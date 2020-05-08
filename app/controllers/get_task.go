@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"git.qutoutiao.net/todoList/app/entity/service"
-	"git.qutoutiao.net/todoList/app/services"
-	"git.qutoutiao.net/todoList/app/utils"
+	"todoList/app/entity/service"
+	"todoList/app/services"
+	"todoList/app/utils"
 	"github.com/gin-gonic/gin"
 )
 

@@ -2,7 +2,7 @@ package conf
 
 import (
 	"bytes"
-	"git.qutoutiao.net/todoList/conf/parse_yaml/fileutil"
+	"todoList/conf/parse_yaml/fileutil"
 	"io/ioutil"
 	"github.com/go-chassis/go-archaius"
 

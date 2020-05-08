@@ -1,9 +1,9 @@
 package main
 
 import (
-	"git.qutoutiao.net/todoList/app/application"
-	"git.qutoutiao.net/todoList/app/models"
-	"git.qutoutiao.net/todoList/app/route"
+	"todoList/app/application"
+	"todoList/app/models"
+	"todoList/app/route"
 	"github.com/gin-gonic/gin"
 )
 

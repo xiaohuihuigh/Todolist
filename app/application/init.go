@@ -2,8 +2,8 @@ package application
 
 import (
 	"fmt"
-	"git.qutoutiao.net/todoList/app/components/microGin"
-	"git.qutoutiao.net/todoList/app/options"
+	"todoList/app/components/microGin"
+	"todoList/app/options"
 	"os"
 )
 var ApplicationInif *_applicationInit

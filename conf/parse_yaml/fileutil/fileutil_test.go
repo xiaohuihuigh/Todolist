@@ -5,7 +5,6 @@ package fileutil_test
 //	"path/filepath"
 //	"testing"
 //
-//	"git.qutoutiao.net/gopher/qms/internal/pkg/utils/fileutil"
 //
 //	"github.com/stretchr/testify/assert"
 //)

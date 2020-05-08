@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"git.qutoutiao.net/todoList/app/components/utils"
+	"todoList/app/components/utils"
 	"reflect"
 	"strconv"
 	"strings"
