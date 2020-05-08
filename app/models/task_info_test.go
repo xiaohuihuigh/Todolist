@@ -1,9 +1,9 @@
 package models_test
 
 import (
-	"git.qutoutiao.net/todoList/app/entity/table"
-	"git.qutoutiao.net/todoList/app/models"
-	"git.qutoutiao.net/todoList/app/utils"
+	"todoList/app/entity/table"
+	"todoList/app/models"
+	"todoList/app/utils"
 	"github.com/golib/assert"
 	"strconv"
 	"testing"

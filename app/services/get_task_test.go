@@ -1,8 +1,8 @@
 package services_test
 
 import (
-	"git.qutoutiao.net/todoList/app/models"
-	"git.qutoutiao.net/todoList/app/services"
+	"todoList/app/models"
+	"todoList/app/services"
 	"github.com/golib/assert"
 	"testing"
 )

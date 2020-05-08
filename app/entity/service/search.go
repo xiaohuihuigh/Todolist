@@ -1,6 +1,6 @@
 package service
 
-import "git.qutoutiao.net/todoList/app/entity/table"
+import "todoList/app/entity/table"
 
 type Search struct {
 	Operator         int64 `json:"operator_id"`

@@ -1,7 +1,7 @@
 package models
 
 import (
-	"git.qutoutiao.net/todoList/app/entity/table"
+	"todoList/app/entity/table"
 	"github.com/jinzhu/gorm"
 )
 

@@ -1,8 +1,8 @@
 package models
 
 import (
-	"git.qutoutiao.net/todoList/app/entity/table"
-	"git.qutoutiao.net/todoList/app/utils"
+	"todoList/app/entity/table"
+	"todoList/app/utils"
 	"github.com/jinzhu/gorm"
 	"strconv"
 	"sync"

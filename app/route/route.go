@@ -1,8 +1,8 @@
 package route
 
 import (
-	"git.qutoutiao.net/todoList/app/components/utils"
-	"git.qutoutiao.net/todoList/app/controllers"
+	"todoList/app/components/utils"
+	"todoList/app/controllers"
 	"github.com/gin-gonic/gin"
 )
 

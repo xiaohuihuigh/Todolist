@@ -3,7 +3,7 @@ package utils
 import (
 	"bytes"
 	"errors"
-	"git.qutoutiao.net/todoList/app/components/logger"
+	"todoList/app/components/logger"
 	"io/ioutil"
 	"net/http"
 )
