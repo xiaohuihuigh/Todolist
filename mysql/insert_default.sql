@@ -1,3 +1,4 @@
+use todo;
 insert into individual_priority(id, owner, one, two, three,
                                 four, five, six, seven, eight,
                                 nine, created_at, updated_at,
